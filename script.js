@@ -1,5 +1,9 @@
 const video = document.getElementById('video');
 
+const TEXTO = document.getElementById('texto');
+const BODY = document.getElementById('body');
+
+
 if(navigator.mediaDevices.getUserMedia){
     navigator.mediaDevices.getUserMedia({video: true})
         .then(stream => {
@@ -27,7 +31,7 @@ function ClassificarVideo(classifier){
 }
 
 function PegarResultado(erro, resultado){
-    document.getElementById('texto').innerHTML = "";
+    TEXTO.innerHTML = "";
     if(erro){
         console.log(erro)
         return;
@@ -35,9 +39,13 @@ function PegarResultado(erro, resultado){
     // console.log(resultado)
     if(resultado[0].label === 'mascara'){
         console.log('mascara')
-        document.getElementById('texto').innerHTML = "MASCARA";
+        TEXTO.innerHTML = "COM MASCARA";
+        BODY.classList.remove("sem")
+        BODY.classList.add("com")
     } else{
-        document.getElementById('texto').innerHTML = "SEM MASCARA";
+        TEXTO.innerHTML = "SEM MASCARA";
+        BODY.classList.remove("com")
+        BODY.classList.add("sem")
     }
         
 }

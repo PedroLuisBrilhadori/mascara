@@ -1,4 +1,27 @@
 .video.inv{
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    text-align: center;
     transform: rotateY(180deg);
  }
 
+ .texto{
+     position: flex;
+     top: 3%;
+     width: 100%;
+     text-align: center;
+     font: bold 25px verdana;
+ }
+
+ .body.sem{
+    background-color: red;
+    align-items: center;
+    height: 50px;
+ }
+
+ .body.com{
+    background-color: green;
+    align-items: center;
+    height: 50px;
+ }
