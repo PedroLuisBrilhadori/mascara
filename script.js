@@ -1,7 +1,7 @@
 const video = document.getElementById('video');
 
 const TEXTO = document.getElementById('texto');
-const BODY = document.getElementById('body');
+const BODY = document.getElementById('borda');
 
 
 if(navigator.mediaDevices.getUserMedia){
